@@ -21,8 +21,13 @@ class Die:
         return int(self) > other
 
     def __lt__(self, other):
-        return int(Self) < other
+        return int(self) < other
 
+    def __ge_(self, other):
+        return int(self) > other or int(self) == other
+
+    def __le__(self, other):
+        return int(self) < other or int(self) == other
 class D6(Die):
     def __init__(self, value=0):
         super().__init__(sides=6, value=value)
