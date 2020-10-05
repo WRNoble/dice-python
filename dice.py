@@ -6,4 +6,8 @@ class Die:
             raise ValueError("Must have at least 2 sides")
         if not isinstance(sides, int):
             raise ValueError("Sides Must be a whole number")
-        
+        self.value =  value or random.randint(1, sides)
+
+class D6:
+    def __init__(self, value=0):
+        super().__init__(sides=6, value=value)
