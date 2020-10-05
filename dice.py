@@ -8,6 +8,15 @@ class Die:
             raise ValueError("Sides Must be a whole number")
         self.value =  value or random.randint(1, sides)
 
+    def __init__(self):
+        return self.value
+
+    def __eq__(self, other):
+        return int(self) == other
+    
+    def __ne__(self, other):
+        return int(self) != other
+
 class D6(Die):
     def __init__(self, value=0):
         super().__init__(sides=6, value=value)
