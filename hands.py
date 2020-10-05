@@ -3,3 +3,6 @@ class Hand(list):
         if not die_class:
             raise ValueError("You must provide a die class.")
         super().__init__()
+
+        for _ in range(size):
+            self.append(die_class())
